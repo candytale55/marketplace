@@ -1,0 +1,152 @@
+
+html {
+    scroll-behavior: smooth;
+
+          /* Color Theme Swatches in Hex */
+          --blue:       #19CBFF;
+          --yellow:     #FFEF58;
+          --magenta:    #ED2DBD;
+          --darkpurple: #321340;
+          --lightgray:  #E2E1E5;
+
+
+    font-size: 10px;  /*To keep calculations simple*/
+    --font-color: var(--yellow);
+    --font-color-1: var(--yellow); /*For header and footer*/
+    --font-color-2: var(--blue);  /*For hover over links*/
+
+      /*Color Variables*/
+
+      --main-bkg:   #ffffff;
+      --header-bkg: var(--darkpurple);
+      --footer-bkg: white;
+      --section-bkg-1: white;
+      --section-bkg-2: white;
+
+      /*Font Variables*/
+      --main-font:   'Montserrat', sans-serif;
+      --title-font:  'Montserrat', sans-serif;
+
+      /*Size Variables*/
+      --header-height: 6rem; /*cambiar*/
+      --footer-height: 2rem; /*cambiar*/
+  }
+
+
+  body {
+    /* General Reset */
+      padding: 0;
+      margin: 0;
+
+    background-color: var(--main-bkg);
+    color: var(font-color);
+
+    font-family: var(--main-font);
+    font-size: 1.6rem;
+  }
+
+
+  header, footer {
+      background-color: var(--header-bkg);
+      height: var(--header-height);
+  }
+
+
+.banner{
+  height: 100vh;
+
+  background-image: url("img/candy_market.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+    /*   NAVIGATION    */
+
+.navbar{ /*The header section*/
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* height: var(--header-height); */
+  /* background-color: var(--header-bkg);*/
+}
+
+.nav{ /* The  ul seciton with the nav links*/
+  display: flex;
+
+  justify-content: right;
+  list-style: none;
+  margin-right: 10%;
+}
+
+.logo{
+  flex: 1 1 auto;
+  margin-left: 2%;
+  font-family: var(--title-font);
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--blue);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+header .dropdown h3{
+  display: inline-block;
+  cursor: pointer;
+
+  margin: 1.5rem;
+  color: var(--font-color-1);
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .dropdown h3:hover {
+  color: var(--font-color-2);
+}
+
+header li {
+  display: inline;
+}
+
+/* Dropdown menus */
+
+header .dropdown {
+  position: relative;
+}
+
+header .dropdwon-menu {
+  position: absolute;
+  top: 2rem;
+  border-radius: 0;
+}
+
+header .dropdown-menu li {
+  display: block;
+  margin: 0;
+  padding: .3rem 1rem;
+}
+
+
+/*  FOOTER */
+
+footer {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+}
+
+footer p {
+  margin: 1.5rem;
+  color: var(--font-color-1);
+}
